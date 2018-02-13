@@ -1,0 +1,3 @@
+[submodule "SDKs/NET"]
+	path = SDKs/NET
+	url = https://github.com/groupdocs-storage-cloud/groupdocs-storage-cloud-dotnet
