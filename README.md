@@ -13,7 +13,7 @@ The following SDKs are currently available:
 
 Directory | Description
 --------- | -----------
-[.NET SDK](SDKs/NET) | Cloud SDK for .NET Framework 2.0 and higher
+[.NET SDK](https://github.com/groupdocs-storage-cloud/groupdocs-storage-cloud-dotnet) | Cloud SDK for .NET Framework 2.0 and higher
 
 To use these SDKs, you will need App SID and App Key which can be looked up at [GroupDocs Cloud Dashboard](https://dashboard.groupdocs.cloud/#/apps) (free registration in GroupDocs Cloud is required for this).
 
