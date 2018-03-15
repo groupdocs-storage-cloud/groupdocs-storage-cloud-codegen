@@ -1,5 +1,5 @@
 del /S /Q "c:\tmp\csharp" || goto :error
-java -jar SDKs\codegen\swagger-codegen-cli-2.3.0.jar generate -i SDKs\spec\groupdocsforcloud_storage.json -l csharp -t SDKs\codegen\Templates\csharp -o c:/tmp/csharp/ -c SDKs\codegen\config.json || goto :error
+java -jar SDKs\codegen\swagger-codegen-cli-2.3.0.jar generate -i SDKs\spec\groupdocsforcloud_storage.json -l csharp -t SDKs\codegen\Templates\csharp -o c:/tmp/csharp/ -c SDKs\codegen\config-net.json || goto :error
 
 SDKs\codegen\Tools\SplitCSharpCodeFile.exe C:\tmp\csharp\src\GroupDocs.Storage.Cloud.Sdk\Api\FileApi.cs C:\tmp\csharp\src\GroupDocs.Storage.Cloud.Sdk\Model\Requests\ || goto :error
 SDKs\codegen\Tools\SplitCSharpCodeFile.exe C:\tmp\csharp\src\GroupDocs.Storage.Cloud.Sdk\Api\FolderApi.cs C:\tmp\csharp\src\GroupDocs.Storage.Cloud.Sdk\Model\Requests\ || goto :error

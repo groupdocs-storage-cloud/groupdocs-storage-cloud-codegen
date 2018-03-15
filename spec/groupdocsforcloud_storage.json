@@ -1,10 +1,10 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "Platform (storage, applications, usage etc.) API Reference",
+    "title": "GroupDocs.Storage for Cloud API",
     "version": "1.0"
   },
-  "host": "http://api-qa.groupdocs.cloud/",
+  "host": "https://api.groupdocs.cloud/",
   "basePath": "/v1.0",
   "schemes": [],
   "consumes": [
@@ -17,7 +17,7 @@
     "/storage/file": {
       "put": {
         "tags": [
-          "File"
+          "storage"
         ],
         "summary": "Upload a specific file ",
         "operationId": "PutCreate",
@@ -74,7 +74,7 @@
       },
       "put": {
         "tags": [
-          "File"
+          "storage"
         ],
         "summary": "Copy a specific file ",
         "operationId": "PutCopy",
@@ -139,7 +139,7 @@
       },
       "get": {
         "tags": [
-          "File"
+          "storage"
         ],
         "summary": "Download a specific file ",
         "operationId": "GetDownload",
@@ -197,7 +197,7 @@
       },
       "post": {
         "tags": [
-          "File"
+          "storage"
         ],
         "summary": "Move a specific file ",
         "operationId": "PostMoveFile",
@@ -269,7 +269,7 @@
       },
       "delete": {
         "tags": [
-          "File"
+          "storage"
         ],
         "summary": "Remove a specific file ",
         "operationId": "DeleteFile",
@@ -318,7 +318,7 @@
     "/storage/folder": {
       "get": {
         "tags": [
-          "Folder"
+          "storage"
         ],
         "summary": "Get the file listing of a specific folder ",
         "operationId": "GetListFiles",
@@ -365,7 +365,7 @@
       },
       "put": {
         "tags": [
-          "Folder"
+          "storage"
         ],
         "summary": "Create the folder ",
         "operationId": "PutCreateFolder",
@@ -419,7 +419,7 @@
       },
       "put": {
         "tags": [
-          "Folder"
+          "storage"
         ],
         "summary": "Copy a folder ",
         "operationId": "PutCopyFolder",
@@ -474,7 +474,7 @@
       },
       "post": {
         "tags": [
-          "Folder"
+          "storage"
         ],
         "summary": "Move a specific folder ",
         "operationId": "PostMoveFolder",
@@ -529,7 +529,7 @@
       },
       "delete": {
         "tags": [
-          "Folder"
+          "storage"
         ],
         "summary": "Remove a specific folder ",
         "operationId": "DeleteFolder",
@@ -579,7 +579,7 @@
     "/storage/{name}/exist": {
       "get": {
         "tags": [
-          "Storage"
+          "storage"
         ],
         "summary": "Check if storage exists ",
         "operationId": "GetIsStorageExist",
@@ -614,7 +614,7 @@
     "/storage/exist": {
       "get": {
         "tags": [
-          "Storage"
+          "storage"
         ],
         "summary": "Check if a specific file or folder exists",
         "operationId": "GetIsExist",
@@ -663,7 +663,7 @@
     "/storage/disc": {
       "get": {
         "tags": [
-          "Storage"
+          "storage"
         ],
         "summary": "Check the disk usage of the current account ",
         "operationId": "GetDiscUsage",
@@ -704,7 +704,7 @@
     "/storage/version": {
       "get": {
         "tags": [
-          "Storage"
+          "storage"
         ],
         "summary": "Get the file's versions list ",
         "operationId": "GetListFileVersions",
@@ -750,7 +750,7 @@
       "additionalProperties": false,
       "allOf": [
         {
-          "$ref": "#/definitions/ResponseMessage"
+          "$ref": "#/definitions/GroupDocsResponse"
         },
         {
           "type": "object"
@@ -762,7 +762,7 @@
       "additionalProperties": false,
       "allOf": [
         {
-          "$ref": "#/definitions/ResponseMessage"
+          "$ref": "#/definitions/GroupDocsResponse"
         },
         {
           "type": "object"
@@ -774,7 +774,7 @@
       "additionalProperties": false,
       "allOf": [
         {
-          "$ref": "#/definitions/ResponseMessage"
+          "$ref": "#/definitions/GroupDocsResponse"
         },
         {
           "type": "object"
@@ -786,7 +786,7 @@
       "additionalProperties": false,
       "allOf": [
         {
-          "$ref": "#/definitions/ResponseMessage"
+          "$ref": "#/definitions/GroupDocsResponse"
         },
         {
           "type": "object"
@@ -798,7 +798,7 @@
       "additionalProperties": false,
       "allOf": [
         {
-          "$ref": "#/definitions/ResponseMessage"
+          "$ref": "#/definitions/GroupDocsResponse"
         },
         {
           "type": "object"
@@ -810,7 +810,7 @@
       "additionalProperties": false,
       "allOf": [
         {
-          "$ref": "#/definitions/ResponseMessage"
+          "$ref": "#/definitions/GroupDocsResponse"
         },
         {
           "properties": {
@@ -857,7 +857,7 @@
         }
       }
     },
-    "ResponseMessage": {
+    "GroupDocsResponse": {
       "type": "object",
       "discriminator": "Type",
       "additionalProperties": false,
@@ -879,7 +879,7 @@
       "additionalProperties": false,
       "allOf": [
         {
-          "$ref": "#/definitions/ResponseMessage"
+          "$ref": "#/definitions/GroupDocsResponse"
         },
         {
           "type": "object"
@@ -891,7 +891,7 @@
       "additionalProperties": false,
       "allOf": [
         {
-          "$ref": "#/definitions/ResponseMessage"
+          "$ref": "#/definitions/GroupDocsResponse"
         },
         {
           "type": "object"
@@ -906,7 +906,7 @@
       ],
       "allOf": [
         {
-          "$ref": "#/definitions/ResponseMessage"
+          "$ref": "#/definitions/GroupDocsResponse"
         },
         {
           "type": "object",
@@ -923,7 +923,7 @@
       "additionalProperties": false,
       "allOf": [
         {
-          "$ref": "#/definitions/ResponseMessage"
+          "$ref": "#/definitions/GroupDocsResponse"
         },
         {
           "type": "object",
@@ -956,7 +956,7 @@
       "additionalProperties": false,
       "allOf": [
         {
-          "$ref": "#/definitions/ResponseMessage"
+          "$ref": "#/definitions/GroupDocsResponse"
         },
         {
           "type": "object",
@@ -991,7 +991,7 @@
       "additionalProperties": false,
       "allOf": [
         {
-          "$ref": "#/definitions/ResponseMessage"
+          "$ref": "#/definitions/GroupDocsResponse"
         },
         {
           "type": "object",
@@ -1046,7 +1046,7 @@
     "oauth": {
       "type": "oauth2",
       "flow": "application",
-      "authorizationUrl": "http://api-qa.groupdocs.cloud/oauth2/token"
+      "authorizationUrl": "http://api.groupdocs.cloud/oauth2/token"
     }
   }
 }

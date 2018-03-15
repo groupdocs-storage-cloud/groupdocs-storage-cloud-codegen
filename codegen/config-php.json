@@ -1,0 +1,7 @@
+{
+  "srcBasePath": "src",
+  "apiPackage": "Api",
+  "modelPackage": "Model",
+  "invokerPackage": "GroupDocs\\Storage",
+  "variableNamingConvention": "camelCase"
+}
