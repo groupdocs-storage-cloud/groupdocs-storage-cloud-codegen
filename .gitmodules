@@ -2,3 +2,6 @@
 	path = SDKs/NET
 	url = https://github.com/groupdocs-storage-cloud/groupdocs-storage-cloud-dotnet
 	branch = master
+[submodule "SDKs/PHP"]
+	path = SDKs/PHP
+	url = https://github.com/groupdocs-storage-cloud/groupdocs-storage-cloud-php
