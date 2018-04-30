@@ -1,0 +1,6 @@
+{
+	"moduleName": "GroupDocsStorageSdk",
+	"gemVersion": "18.4",
+	"gemName": "group_docs_storage_sdk",
+	"variableNamingConvention":"camelCase"
+}
