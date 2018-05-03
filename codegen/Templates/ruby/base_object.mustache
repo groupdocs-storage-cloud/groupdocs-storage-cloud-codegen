@@ -4,14 +4,16 @@
     def build_from_hash(attributes)
       return nil unless attributes.is_a?(Hash)
       self.class.swagger_types.each_pair do |key, type|
+        key_attr = self.class.attribute_map[key].to_s
+        key_attr[0] = key_attr[0].downcase
         if type =~ /\AArray<(.*)>/i
           # check to ensure the input is an array given that the the attribute
           # is documented as an array but the input is not
-          if attributes[self.class.attribute_map[key].downcase].is_a?(Array)
-            self.send("#{key}=", attributes[self.class.attribute_map[key].downcase].map{ |v| _deserialize($1, v) } )
+          if attributes[key_attr.to_sym].is_a?(Array)
+            self.send("#{key}=", attributes[key_attr.to_sym].map{ |v| _deserialize($1, v) } )
           end
-        elsif !attributes[self.class.attribute_map[key].downcase].nil?
-          self.send("#{key}=", _deserialize(type, attributes[self.class.attribute_map[key].downcase]))
+        elsif !attributes[key_attr.to_sym].nil?
+          self.send("#{key}=", _deserialize(type, attributes[key_attr.to_sym]))
         end # or else data not found in attributes(hash), not an issue as the data can be optional
       end
       self
