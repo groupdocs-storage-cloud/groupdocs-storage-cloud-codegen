@@ -149,12 +149,7 @@ module {{moduleName}}
       {{/required}}
       {{/queryParams}}
       {{#queryParams}}
-      {{^required}}
-      if local_var_path.include? downcase_first_letter('{{baseName}}')
-        local_var_path = local_var_path.sub('{' + downcase_first_letter('{{baseName}}') + '}', request.{{paramName}}.to_s)
-      else
-        query_params[downcase_first_letter('{{baseName}}')] = {{#collectionFormat}}@api_client.build_collection_param(request.{{{paramName}}}, :{{{collectionFormat}}}){{/collectionFormat}}{{^collectionFormat}}request.{{{paramName}}}{{/collectionFormat}} unless request.{{{paramName}}}.nil?
-      end{{/required}}
+      query_params[downcase_first_letter('{{baseName}}')] = {{#collectionFormat}}@api_client.build_collection_param(request.{{{paramName}}}, :{{{collectionFormat}}}){{/collectionFormat}}{{^collectionFormat}}request.{{{paramName}}}{{/collectionFormat}} unless request.{{{paramName}}}.nil?
       {{/queryParams}}
 
       # header parameters
